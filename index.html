@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybertron Algorithme Algebre</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      transition: background 1s ease;
+    }
+    header {
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 900;
+    }
+    header p {
+      font-style: italic;
+      color: #ccc;
+    }
+    nav {
+      background: #1c1c1c;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .photo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .photo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #00ffff;
+      box-shadow: 0 0 20px #00ffff;
+    }
+    h2 {
+      color: #00ffff;
+      border-bottom: 1px solid #00ffff;
+      padding-bottom: 0.5rem;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+    .carousel img {
+      min-width: 100%;
+      transition: transform 0.8s ease-in-out;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.5);
+    }
+    .toggle-btn {
+      background-color: #00ffff;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      display: block;
+      margin: 2rem auto 1rem;
+    }
+    #services-content {
+      display: none;
+      transition: all 0.5s ease;
+    }
+    .service-box {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+    }
+    .service-box h3 {
+      color: #00ffff;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cybertron Algorithme Algebre</h1>
+    <p>Génie du monde de la science 💻🔬🦠</p>
+  </header>
+
+  <nav>
+    <a href="#apropos">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container" id="apropos">
+    <div class="photo">
+      <img src="IMG_20250514_090118_846.jpg" alt="Photo de Cybertron" />
+    </div>
+    <h2>À propos</h2>
+    <p>Je suis un génie du monde de la science. Mon cerveau carbure à l’algèbre, à l’intelligence artificielle et à l’élégance mathématique. Je façonne les codes comme un sculpteur façonne le marbre, révélant la beauté cachée de l’univers numérique.</p>
+
+    <h2>Compétences</h2>
+    <p>
+      - Algèbre avancée<br>
+      - Intelligence artificielle<br>
+      - Génie mathématique<br>
+      - Création d’algorithmes
+    </p>
+  </div>
+
+  <div class="container" id="services">
+    <h2>Services</h2>
+    <button class="toggle-btn" onclick="toggleServices()">Voir les services</button>
+    <div id="services-content">
+      <div class="service-box">
+        <h3>Boostage Facebook, Instagram et création de bot messenger</h3>
+        <p>Augmentez la visibilité de vos pages et publications Facebook avec des stratégies personnalisées et puissantes.</p>
+      </div>
+      <div class="service-box">
+        <h3>Hacking Éthique</h3>
+        <p>Apprenez les bases du hacking pour sécuriser vos systèmes et comprendre les vulnérabilités.</p>
+      </div>
+      <div class="service-box">
+        <h3>Bining sous Termux</h3>
+        <p>Formations sur les commandes de base, scripts et automatisations avec Termux sur Android.</p>
+      </div>
+      <div class="service-box">
+        <h3>Assistance technique</h3>
+        <p>Je vous guide dans vos projets informatiques, résous vos problèmes et optimise vos systèmes.</p>
+      </div>
+
+      <div class="carousel" id="carousel">
+        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" alt="Hacker" />
+        <img src="https://images.unsplash.com/photo-1581090700227-1e8d6a27b6f3" alt="Code" />
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="MacBook" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Contact</h2>
+    <a href="cyberg373@gmail.com">🔗E-MAIL</a><br><br>
+    <a href="https://www.facebook.com/cybertron.algo">🔗FACEBOOK.COM</a>
+     </div>
+
+  <script>
+    function toggleServices() {
+      const content = document.getElementById('services-content');
+      content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+    }
+
+    // Carousel auto défilement
+    let carousel = document.getElementById('carousel');
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % carousel.children.length;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+
+    // Changement de couleur au scroll
+    const couleurs = [
+      'linear-gradient(to right, #0f2027, #203a43, #2c5364)',
+      'linear-gradient(to right, #1a1a1d, #4e4e50, #6f2232)',
+      'linear-gradient(to right, #000000, #434343)',
+      'linear-gradient(to right, #0f0c29, #302b63, #24243e)'
+    ];
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+      const couleurIndex = Math.floor(scrollPos / 500) % couleurs.length;
+      document.body.style.background = couleurs[couleurIndex];
+    });
+  </script>
+</body>
+</html>
